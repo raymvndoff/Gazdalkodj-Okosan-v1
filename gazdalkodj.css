@@ -1,0 +1,487 @@
+@keyframes forgas {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sav {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0 auto;
+  overflow: auto;
+  background: linear-gradient(
+    to right,
+    #3a4941,
+    #151515,
+    #151515,
+    #151515,
+    #151515,
+    #151515,
+    #151515,
+    #151515,
+    #151515,
+    #151515,
+    #151515,
+    #151515,
+    #3a4941
+  );
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+#navbar {
+  backdrop-filter: blur(5px);
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  z-index: 100000;
+}
+
+#navbar a {
+  padding: 15px;
+  width: 70px;
+  text-align: center;
+}
+
+#navbar a:nth-child(1) {
+  border-right: 1px dashed white;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+#navbar a:nth-child(2) {
+  border-left: 1px dashed white;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#navbar a:hover {
+  background-color: #121212;
+}
+
+#navbar img {
+  height: 30px;
+  width: 30px;
+  filter: invert(100%);
+}
+
+.hozzaadascontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.emberhozzaadaseffect {
+  margin-top: 200px;
+  font-size: 20px;
+  position: relative;
+  display: grid;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  width: 520px;
+  height: 520px;
+  overflow: hidden;
+  background-color: #1a1c1c;
+  box-shadow: 0.1px 0.1px 30px #80e5b2;
+}
+
+.emberhozzaadaseffect::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, transparent, #80e5b2, transparent);
+  width: 520px;
+  height: 520px;
+  animation: 20s sav linear infinite;
+  transform-origin: bottom right;
+  top: -50%;
+  left: -50%;
+}
+
+.emberhozzaadaseffect::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, transparent, #80e5b2, transparent);
+  width: 520px;
+  height: 520px;
+  animation: 20s sav linear infinite;
+  animation-delay: -10s;
+  transform-origin: bottom right;
+  top: -50%;
+  left: -50%;
+}
+
+.emberhozzaadas {
+  position: absolute;
+  inset: 2.5px;
+  z-index: 10;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 75px;
+  display: grid;
+  gap: 15px;
+  box-shadow: 0.1px 0.1px 30px #80e5b2;
+  background-color: #1f2020;
+}
+
+h2 {
+  color: white;
+  text-shadow: 0.1px 0.1px 5px grey;
+  text-transform: uppercase;
+}
+
+#osszeg {
+  padding: 10px;
+  background-color: transparent;
+  color: lightgrey;
+  border-left: hidden;
+  border-top: hidden;
+  border-right: hidden;
+  border-bottom: 1px solid white;
+}
+
+#szin {
+  border: hidden;
+  background-color: transparent;
+  float: right;
+  width: 27px;
+  height: 27px;
+}
+
+#szin:hover {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+#name {
+  border-right: 1px dashed white;
+  border-left: hidden;
+  border-bottom: hidden;
+  border-top: hidden;
+  background-color: transparent;
+  color: white;
+}
+
+#szinesform {
+  height: 20px;
+  padding: 10px;
+  background-color: transparent;
+  color: lightgrey;
+  border-left: hidden;
+  border-top: hidden;
+  border-right: hidden;
+  border-bottom: 1px solid white;
+}
+.emberhozzaadas input::placeholder {
+  color: grey;
+}
+
+.emberhozzaadas input:focus {
+  outline: none;
+}
+
+.emberhozzaadas button {
+  padding: 10px;
+  background-color: #ffffff0e;
+  color: white;
+  border: hidden;
+  border-radius: 30px;
+}
+
+#hozzaadgomb:hover {
+  color: black;
+  background-color: #80e5b2;
+  cursor: pointer;
+}
+
+#torolgomb:hover {
+  color: black;
+  background-color: #ac6060;
+  cursor: pointer;
+}
+
+#szazalekszam {
+  height: 30px;
+  border-left: hidden;
+  border-top: hidden;
+  border-right: hidden;
+  border-bottom: 1px solid #80e5b2;
+  background-color: transparent;
+  color: #80e5b2;
+}
+
+#form {
+  height: 30px;
+  border-left: hidden;
+  border-top: hidden;
+  border-right: hidden;
+  border-bottom: 1px solid #80e5b2;
+  background-color: transparent;
+  color: #80e5b2;
+}
+
+#muveletszam {
+  border-bottom: none;
+  border-left: none;
+  border-top: none;
+  border-right: 1px dotted #80e5b2;
+  background-color: transparent;
+  color: #80e5b2;
+}
+
+#resetgomb {
+  border: none;
+  background-color: transparent;
+  color: #80e5b2;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#resetgomb:hover {
+  background-color: #80e5b2;
+  color: black;
+  cursor: pointer;
+}
+
+#muveletszam:focus,
+#szazalekszam:focus {
+  outline: none;
+}
+
+.muveletek button {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #1a1c1c;
+  background-color: #80e5b2;
+}
+
+.muveletek button:hover {
+  background-color: #1f2020;
+  border: 1px solid #80e5b2;
+  color: white;
+  cursor: pointer;
+}
+
+th,
+tr,
+td {
+  text-align: center;
+}
+
+th:nth-child(1) {
+  border-bottom: 1px dashed #80e5b2;
+  width: 5px;
+}
+
+th:nth-child(2) {
+  border-right: 1px dashed #80e5b2;
+  border-bottom: 1px dashed #80e5b2;
+  width: 200px;
+  padding: 10px;
+}
+
+th:nth-child(3) {
+  border-bottom: 1px dashed #80e5b2;
+  width: 200px;
+  padding: 10px;
+}
+td:nth-child(2) {
+  border-right: 1px dashed #80e5b2;
+}
+td:nth-child(3) {
+  border-left: 1px dashed #80e5b2;
+}
+
+tr:nth-child(1) {
+  color: #80e5b2;
+  font-weight: bold;
+}
+
+tr:nth-child(2),
+tr:nth-child(3),
+tr:nth-child(4),
+tr:nth-child(5),
+tr:nth-child(6),
+tr:nth-child(7) {
+  color: #caf7dd;
+}
+
+tr:nth-child(odd) {
+  background-color: #292929;
+}
+
+tr:nth-child(even) {
+  background-color: #2f2f2f;
+}
+
+tr {
+  border-radius: 5px;
+  color: white;
+}
+
+table input {
+  float: right;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 10px;
+}
+
+.jatekmenetcontainer {
+  margin-top: 30%;
+  margin-bottom: 2.5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.jatekmeneteffect {
+  position: relative;
+  display: grid;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  width: 1000px;
+  height: 800px;
+  overflow: hidden;
+  background-color: #1a1c1c;
+  box-shadow: 0.1px 0.1px 30px #80e5b2;
+}
+
+.jatekmeneteffect::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, transparent, #80e5b2, transparent);
+  width: 1000px;
+  height: 800px;
+  animation: 20s sav linear infinite;
+  transform-origin: bottom right;
+  top: -50%;
+  left: -50%;
+}
+
+.jatekmeneteffect::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, transparent, #80e5b2, transparent);
+  width: 1000px;
+  height: 800px;
+  animation: 20s sav linear infinite;
+  animation-delay: -10s;
+  transform-origin: bottom right;
+  top: -50%;
+  left: -50%;
+}
+
+.jatekmenet {
+  position: absolute;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  inset: 2.5px;
+  background-color: #1f2020;
+  z-index: 10;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.bemenet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.bemenetinputs {
+  background-color: #292929;
+  border-radius: 10px;
+  border: 2px solid #80e5b2;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 160px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.muveletek {
+  background-color: #292929;
+  border-radius: 10px;
+  border: 2px solid #80e5b2;
+  display: grid;
+  justify-content: center;
+  width: 400px;
+  height: 160px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.utolso {
+  display: flex;
+  justify-content: center;
+}
+
+.tablazat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #292929;
+  border-radius: 10px;
+  border: 2px solid #80e5b2;
+  padding: 10px;
+  width: 700px;
+}
+
+#tabla {
+  border-top: 1px dashed #80e5b2;
+  border-bottom: 1px dashed #80e5b2;
+  height: 300px;
+  color: #80e5b2;
+  border-collapse: collapse;
+  font-size: 20px;
+  width: 650px;
+}
+
+#legutobbi {
+  background-color: #292929;
+  border-radius: 10px;
+  border: 2px solid #80e5b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  width: 700px;
+  padding: 10px;
+}
+
+@media (max-width: 800px) {
+  .tablazat {
+    width: 400px;
+  }
+  #legutobbi {
+    width: 400px;
+  }
+}

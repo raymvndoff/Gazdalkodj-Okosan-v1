@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gazdalkodj.css" />
+    <script src="gazdalkodj.js"></script>
+    <title>Gazdálkodj Okosan Bank</title>
+  </head>
+  <body>
+    <div id="navbar">
+      <a
+        onmouseover="plusnavscriptHover()"
+        onmouseout="plusnavscript()"
+        href="#hozzaadas"
+        ><img src="plusicon.png" alt="játékos hozzáadása" id="plusicon"
+      /></a>
+      <a
+        onmouseover="gamenavscriptHover()"
+        onmouseout="gameplusnavscript()"
+        href="#jatek"
+        ><img src="gameicon.png" alt="játék" id="gameicon"
+      /></a>
+    </div>
+
+    <a id="hozzaadas"></a>
+
+    <div class="hozzaadascontainer">
+      <div class="emberhozzaadaseffect">
+        <div class="emberhozzaadas">
+          <h2>Játékos hozzáadása</h2>
+          <div id="szinesform">
+            <input type="text" name="name" id="name" placeholder="Név" />
+            <input type="color" name="szin" id="szin" />
+          </div>
+
+          <input
+            type="number"
+            name="osszeg"
+            id="osszeg"
+            placeholder="Kezdő összeg"
+            value="3000000"
+          />
+          <button type="button" id="hozzaadgomb" onclick="jatekosHozzaadasa()">
+            Hozzáad
+          </button>
+          <button type="button" id="torolgomb" onclick="jatekosTorlese()">
+            Legutóbbi játékos törlése
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="jatekmenetcontainer">
+      <div class="jatekmeneteffect">
+        <div class="jatekmenet">
+          <div class="bemenet">
+            <div class="bemenetinputs">
+              <div id="form">
+                <input
+                  type="number"
+                  name="muveletszam"
+                  id="muveletszam"
+                  placeholder="Összeg"
+                  onkeydown="javascript: return event.keyCode == 69 ? false : true"
+                />
+                <button id="resetgomb" onclick="reset()">Töröl</button>
+              </div>
+              <input
+                type="number"
+                name="szazalekszam"
+                id="szazalekszam"
+                placeholder="%"
+                maxlength="2"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                onkeydown="javascript: return event.keyCode == 69 ? false : true"
+              />
+            </div>
+
+            <div class="muveletek">
+              <div class="elsoharom">
+                <button id="plussz" onclick="plussz()">+</button>
+                <button id="minusz" onclick="minusz()">-</button>
+                <button id="plussz1m" onclick="plussz1m()">+1M</button>
+              </div>
+              <div class="utolsoharom">
+                <button id="szazalek" onclick="plusszszazalek()">+%</button>
+                <button id="szazalek" onclick="minuszszazalek()">-%</button>
+                <button id="plussz500k" onclick="plussz500k()">+500K</button>
+              </div>
+              <div class="utolso">
+                <button id="hetsz" onclick="hetsz()">+7%</button>
+              </div>
+            </div>
+
+            <div class="tablazat">
+              <table id="tabla">
+                <tr>
+                  <th></th>
+                  <th>Név</th>
+                  <th>Egyenleg(Ft)</th>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      name="elsocheck"
+                      id="elsocheck"
+                      onclick="elsoCheckBoxChecked()"
+                    />
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      name="masodikcheck"
+                      id="masodikcheck"
+                      onclick="masodikCheckBoxChecked()"
+                    />
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      name="harmadikcheck"
+                      id="harmadikcheck"
+                      onclick="harmadikCheckBoxChecked()"
+                    />
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      name="negyedikcheck"
+                      id="negyedikcheck"
+                      onclick="negyedikCheckBoxChecked()"
+                    />
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      name="otodikcheck"
+                      id="otodikcheck"
+                      onclick="otodikCheckBoxChecked()"
+                    />
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      name="hatodikcheck"
+                      id="hatodikcheck"
+                      onclick="hatodikCheckBoxChecked()"
+                    />
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+
+            <div id="legutobbi">
+              <span style="color: grey; font-weight: 75"
+                >a legutóbbi tranzakció itt fog megjelenni</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a id="jatek"></a>
+  </body>
+</html>
