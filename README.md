@@ -1,2 +1,2 @@
 # Gazdalkodj-Okosan-v1
-Gazdálkodj Okosan társasjáték segítő weboldalas felületem első (butább) verziója.
+Ötletem alapja a családi társasjáték megkönnyítése volt. A Gazdálkodj okosan társasjáték „bankár” szerepét betöltő webes felület. Rögzíteni tudjuk az egyes játékosokat, azok bábúinak színeit, és az egyes mezőkön fizetendő agy éppen jóváírandó összegeket tudjuk egyszerűen rögzíteni, és mindeközben mindenki valós időben látja egy táblázatban a saját (és más játékosok) aktuális egyenlegét.
